@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Amatic+SC|Caveat|Indie+Flower|Montserrat|Pacifico|Shadows+Into+Light&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+
+<!-- CSS -->
+{% block customCSS %}{% endblock customCSS %}
+
+<!-- JS -->
+{% block customJS %}{% endblock customJS %}
+
+<title>Title</title>
+</head>
+<body>
+
+{% include 'base/header.html' %}
+
+<!-- Main Content -->
+{% block content %}{% endblock content %}
+    
+
+    
+
+    <footer>
+        <hr class="cp_hr01"/>
+        <div class="SNS">
+            <div class="SNS-icon">
+              <a href="#" class="o-btn instagram"><span class="fab fa-instagram"></span></a>
+              <a href="#" class="o-btn twitter"><span class="fab fa-twitter"></span></a>
+              
+            </div>
+            
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

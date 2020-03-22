@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+<!-- style CSS -->
+{% block customCSS %}
+    <link rel="stylesheet" href="{% static 'css/user/login.css' %}">
+{% endblock customCSS %}
+
+
+{% block content %}
+
+
+    <div class="headerr">
+        <div class="container">
+        </div>
+    </div>
+
+    <div class="loglog">
+        <div class="container">
+            <form class="form-signin" method="POST">
+                <input type="hidden" name="csrfmiddlewaretoken" value="oS69skOeZO43oHZJBw29HGD5Ii10JeeaCs1Cuxab4WoVdTYc0lJvstIOKqcUCjNf"> 
+                <div class="form-signin-heading"><h2>Login</h2></div>
+
+                <input type="text" class="form-control" name="username" placeholder="Email" required="" autofocus="">
+          
+                <input type="password" class="form-control" name="password" placeholder="Password" required="">
+          
+                <button type="submit" class="btn btn-lg btn-secondary btn-block form-btn">Login</button>
+          
+                <p class="center mt-3">or</p>
+                <p class="center"><a href="/user/signup/">New Add</a></p>
+              </form>
+        </div>
+    </div>
+
+
+{% endblock content %}

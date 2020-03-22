@@ -8,11 +8,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import User
 from django.urls import reverse_lazy
 
-from cloudinary import api
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-
 
 
 '''
@@ -22,7 +17,7 @@ forms.pyで作成したCustomUserCreationFormを使って新しいユーザー�
 
 def signup(request):
     if request.user.is_authenticated:
-        return redirect('main:profile')
+        return redirect('post:login')
     if request.method == 'POST':
         # ユーザーインスタンスを作成
         form = CustomUserCreationForm(request.POST)

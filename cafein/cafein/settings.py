@@ -27,7 +27,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'post',
     'User',
+    'crispy_forms',
+    'cloudinary',
+    'cloudinary_storage',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 AUTH_USER_MODEL = 'User.User'
 
@@ -122,6 +127,20 @@ PROJECT_ROOT=os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT,'static')
 
 # 画像の設定
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'cafein')
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/cafein/'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'daikiante',
+    'API_KEY': '784358422243211',
+    'API_SECRET': '_VZ9h2P-1jtVwc8-bS1a7YbCUtg'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+# ログイン、ログアウト後のリダイレクト設定
+LOGIN_URL = 'user:login'
+LOGIN_REDIRECT_URL = 'post:home'
+LOGOUT_REDIRECT_URL = 'post:home'
